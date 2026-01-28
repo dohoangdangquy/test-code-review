@@ -2,11 +2,13 @@
 
 namespace App\Model;
 
+//Implement JsonSerializable for consistency with Task class
 class Project
 {
     /**
      * @var array
      */
+    //Make it private and using getter, also change variable name from $_data -> $data
     public $_data;
     
     public function __construct($data)
@@ -25,6 +27,7 @@ class Project
     /**
      * @return string
      */
+    // change to jsonSerialize()
     public function toJson()
     {
         return json_encode($this->_data);

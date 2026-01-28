@@ -7,6 +7,7 @@ class Task implements \JsonSerializable
     /**
      * @var array
      */
+    //Using getter, also change variable name from $_data -> $data
     private $_data;
     
     public function __construct($data)
